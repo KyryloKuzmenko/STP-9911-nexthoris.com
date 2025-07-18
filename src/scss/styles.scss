@@ -1,0 +1,17 @@
+@import './header.scss';
+@import './footer.scss';
+@import './cpt.scss';
+
+
+.container {
+  max-width: 375px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  @include media(desktop) {
+    max-width: 1440px;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
