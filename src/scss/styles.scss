@@ -1,17 +1,61 @@
 @import './header.scss';
+@import './home.scss';
+@import './about.scss';
+@import './services.scss';
+@import './how-it-works.scss';
+@import './case-studies.scss';
+@import './experts.scss';
+@import './faq.scss';
+@import './contact.scss';
+@import './cookies-modal.scss';
 @import './footer.scss';
 @import './cpt.scss';
-
 
 .container {
   max-width: 375px;
   margin: 0 auto;
   padding-left: 16px;
   padding-right: 16px;
-
+  background: #0e0e12;
   @include media(desktop) {
     max-width: 1440px;
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-left: 80px;
+    padding-right: 80px;
   }
+}
+
+h2 {
+  color: #ededed;
+  font-weight: 200;
+  font-size: 28px;
+  color: #ededed;
+  @include media(desktop) {
+    font-size: 40px;
+  }
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 200;
+  color: #a8b2c1;
+  background-color: #555555;
+}
+
+.title-line {
+  @include media(desktop) {
+    display: none;
+  }
+}
+
+.title-line-desktop {
+  display: none;
+  @include media(desktop) {
+    display: block;
+  }
+}
+
+
+
+section[id] {
+  scroll-margin-top: 20px;
 }

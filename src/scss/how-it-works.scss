@@ -1,0 +1,137 @@
+.how-it-works-content-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include media(desktop) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+.how-it-works-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.how-it-works-label {
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: #ededed;
+}
+
+.how-it-works-title {
+  margin-top: 50px;
+  font-weight: 200;
+  font-size: 28px;
+  line-height: 1.5;
+  text-align: center;
+  color: #ededed;
+  @include media(desktop) {
+    font-size: 40px;
+  }
+}
+
+.how-it-works-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  @include media(desktop) {
+    flex-direction: row;
+    margin-top: 64px;
+  }
+}
+
+.how-it-works-step {
+  border-radius: 4px;
+  padding: 40px;
+  max-width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid #313742;
+}
+
+.how-it-works-step::before,
+.how-it-works-step::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 1px;
+  height: 50%;
+
+  background: linear-gradient(to top, #313742 0%, rgba(49, 55, 66, 0) 100%);
+}
+
+.how-it-works-step::before {
+  left: 0;
+}
+
+.how-it-works-step::after {
+  right: 0;
+}
+
+.how-it-works-step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #f7cc6f;
+  border-radius: 100px;
+  padding: 10px;
+  width: 80px;
+  height: 80px;
+
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 1.5;
+  text-align: center;
+  color: #a8b2c1;
+}
+
+.how-it-works-step-title {
+  margin-top: 30px;
+  font-weight: 200;
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: center;
+  color: #ededed;
+}
+
+.how-it-works-step-description {
+  margin-top: 30px;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: #a8b2c1;
+}
+
+.how-it-works-btn {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 280px;
+  height: 48px;
+  box-shadow: 0 2px 2px rgba(25.65, 123.96, 110.23, 0.5);
+  border-radius: 4px;
+  outline: 1px solid #63d2ea;
+  outline-offset: -1px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #ededed;
+  text-align: center;
+}

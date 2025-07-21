@@ -1,0 +1,118 @@
+.experts-content-wrap {
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include media(desktop) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+.experts-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.experts-label {
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: #ededed;
+  white-space: nowrap;
+}
+
+.experts-title {
+  margin-top: 48px;
+  font-weight: 200;
+  font-size: 28px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #ededed;
+  @include media(desktop) {
+    font-size: 40px;
+  }
+}
+
+.experts-main {
+  margin-top: 40px;
+  background-image: url('../img/mobile/experts-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 164px;
+  @include media(desktop) {
+    background-image: url('../img/desktop/experts-bg-desktop.png');
+    padding: 0;
+    height: 422px;
+    justify-content: space-between;
+    margin-top: 64px;
+  }
+}
+
+.experts-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  @include media(desktop) {
+    flex-direction: row;
+    max-width: 1096px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 24px;
+  }
+}
+
+.expert-card {
+  border-radius: 2px;
+  padding: 24px 16px;
+
+  height: 66px;
+  background: #0e0e12;
+  display: flex;
+  width: 100%;
+  max-width: 323px;
+  align-items: center;
+  justify-content: center;
+  @include media(desktop) {
+    width: 200px;
+height: 120px;
+  }
+}
+
+.expert-card-text {
+  font-weight: 200;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+  color: #ededed;
+}
+
+.expert-deskription-wrap {
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 144px;
+  background: #0e0e12;
+  margin-top: 25px;
+  @include media(desktop) {
+    width: 519px;
+    height: 147px;
+
+  }
+}
+
+.experts-description {
+  text-align: center;
+  color: #a8b2c1;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 287px;
+}
