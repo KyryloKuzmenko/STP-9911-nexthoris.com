@@ -58,4 +58,7 @@ body {
 
 section[id] {
   scroll-margin-top: 20px;
+  @include media(desktop) {
+     scroll-margin-top: 120px;
+  }
 }

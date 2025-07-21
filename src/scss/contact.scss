@@ -1,0 +1,103 @@
+.contact-content-wrap {
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include media(desktop) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+
+.contact-label {
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: #ededed;
+}
+
+.contact-header {
+  display: flex;
+  gap: 24px;
+}
+
+.contact-line {
+  display: flex;
+  width: 100%;
+  max-width: 300px;
+  @include media(desktop) {
+    max-width: none;
+  }
+}
+
+.contact-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.contact-wrap {
+  @include media(desktop) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 64px;
+  }
+}
+
+.contact-title {
+  margin-top: 50px;
+  font-weight: 200;
+  font-size: 28px;
+  line-height: 1.5;
+  text-align: center;
+  color: #ededed;
+  @include media(desktop) {
+    margin: 0;
+    font-size: 40px;
+  }
+}
+
+.contact-description {
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: #a8b2c1;
+  margin-top: 40px;
+  max-width: 333px;
+  @include media(desktop) {
+    margin: 0;
+    max-width: none;
+  }
+}
+
+.contact-list {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  @include media(desktop) {
+    max-width: 1010px;
+    flex-direction: row;
+    gap: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 64px;
+  }
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-link,
+.contact-text {
+  font-weight: 200;
+  font-size: 12px;
+  color: #ededed;
+}

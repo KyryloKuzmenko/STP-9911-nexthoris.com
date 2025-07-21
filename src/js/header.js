@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuBtn = document.querySelector('.burger-menu');
   const closeMenu = document.querySelector('.close-menu');
   const backdrop = document.querySelector('.backdrop');
-  const links = document.querySelectorAll('.backdrop-list-item, header-list-item');
+  const links = document.querySelectorAll('.backdrop-list-item');
 
   function toggleMenu(show) {
     menuBtn.style.display = show ? 'none' : 'block';
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   links.forEach(link => {
     link.addEventListener('click', () => {
-      toggleMenu(false); 
+      toggleMenu(false);
     });
   });
 
@@ -26,23 +26,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.backdrop-link, .header-link');
 
   function onScroll() {
+    const middleOfScreen = window.innerHeight / 2;
     let currentId = '';
+
     sections.forEach(section => {
-      const top = section.offsetTop;
-      const height = section.offsetHeight;
-      if (window.scrollY >= top - height / 2) {
-        currentId = section.getAttribute('id');
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= middleOfScreen && rect.bottom >= middleOfScreen) {
+        currentId = section.id;
       }
     });
 
     navLinks.forEach(link => {
-      link.classList.toggle(
-        'active',
-        link.getAttribute('href') === `#${currentId}`
-      );
+      link.classList.toggle('active', link.getAttribute('href') === `#${currentId}`);
     });
   }
 
   window.addEventListener('scroll', onScroll);
-  onScroll();
+  onScroll(); 
 });
